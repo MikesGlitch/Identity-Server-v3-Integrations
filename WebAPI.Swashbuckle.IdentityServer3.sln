@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomUserService", "CustomUserService\CustomUserService\CustomUserService.csproj", "{F74E7A67-19F8-4CD5-8EA0-0EB7F8305515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI2 SwashBuckle Multitenancy", "WebAPI2 SwashBuckle Multitenancy\WebAPI2 SwashBuckle Multitenancy.csproj", "{2F418037-617D-4BF6-89BA-C30F2CF39CE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F74E7A67-19F8-4CD5-8EA0-0EB7F8305515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74E7A67-19F8-4CD5-8EA0-0EB7F8305515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74E7A67-19F8-4CD5-8EA0-0EB7F8305515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74E7A67-19F8-4CD5-8EA0-0EB7F8305515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F418037-617D-4BF6-89BA-C30F2CF39CE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F418037-617D-4BF6-89BA-C30F2CF39CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F418037-617D-4BF6-89BA-C30F2CF39CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F418037-617D-4BF6-89BA-C30F2CF39CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
