@@ -3,7 +3,7 @@ using System.Configuration;
 using IdentityModel.Client;
 using Microsoft.AspNet.SignalR.Client;
 using Newtonsoft.Json;
-using SignalRSelfHost.Notifications;
+using SignalRClient.Notifications;
 
 namespace SignalRClient
 {

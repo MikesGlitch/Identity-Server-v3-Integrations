@@ -4,7 +4,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace SignalRSelfHost.Notifications
+namespace SignalRClient.Notifications
 {
     public class Notification
     {
