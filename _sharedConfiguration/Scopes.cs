@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
+using System.Collections.Generic;
 using IdentityServer3.Core;
 using IdentityServer3.Core.Models;
-using System.Collections.Generic;
 
 namespace IdentityServer3.Host.Config
 {
@@ -92,6 +92,11 @@ namespace IdentityServer3.Host.Config
                         {
                             new ScopeClaim("tenantid")
                         }
+                    },
+                    new Scope
+                    {
+                        Name = "signalR",
+                        DisplayName = "signalR",
                     }
                 };
         }

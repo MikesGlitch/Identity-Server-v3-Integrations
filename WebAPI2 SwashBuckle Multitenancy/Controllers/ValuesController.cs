@@ -2,6 +2,7 @@
 {
     using System.Web.Http;
 
+    [Authorize]
     public class ValuesController : ApiController
     {
         public IHttpActionResult GetValues()

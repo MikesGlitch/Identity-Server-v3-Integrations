@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
+using System.Collections.Generic;
 using IdentityServer3.Core;
 using IdentityServer3.Core.Models;
-using System.Collections.Generic;
-using System.Security.Claims;
 
 namespace IdentityServer3.Host.Config
 {
@@ -37,28 +36,21 @@ namespace IdentityServer3.Host.Config
                     Enabled = true,
                     ClientId = "clientcredentials.client",
                     Flow = Flows.ClientCredentials,
+                    AccessTokenType = AccessTokenType.Jwt,
 
                     ClientSecrets = new List<Secret>
                         {
-                            new Secret("secret".Sha256()),
                             new Secret
                             {
-                                Value = "61B754C541BBCFC6A45A9E9EC5E47D8702B78C29",
-                                Type = Constants.SecretTypes.X509CertificateThumbprint,
-                                Description = "Client Certificate"
+                                Value = "61B754C541BBCFC6A45A9E9EC5E47D8702B78C29".Sha256(),
                             },
                         },
+                    RequireConsent = false,
 
                     AllowedScopes = new List<string>
                         {
-                            "read",
-                            "write"
+                            "signalR"
                         },
-
-                    Claims = new List<Claim>
-                        {
-                            new Claim("location", "datacenter")
-                        }
                 },
 
                 /////////////////////////////////////////////////////////////
@@ -78,7 +70,8 @@ namespace IdentityServer3.Host.Config
                     AllowedScopes = new List<string>
                     {
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     AllowedCustomGrantTypes = new List<string>
@@ -108,7 +101,8 @@ namespace IdentityServer3.Host.Config
                         "read",
                         "write",
                         "address",
-                        "offline_access"
+                        "offline_access",
+                        "signalR"
                     },
 
                     // used by JS resource owner sample
@@ -139,7 +133,8 @@ namespace IdentityServer3.Host.Config
                     AllowedScopes = new List<string>
                     {
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -167,7 +162,8 @@ namespace IdentityServer3.Host.Config
                         "openid",
                         "email",
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -202,7 +198,8 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Email,
                         Constants.StandardScopes.Roles,
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -265,7 +262,8 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Roles,
                         Constants.StandardScopes.OfflineAccess,
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     AccessTokenType = AccessTokenType.Reference,
@@ -288,7 +286,8 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Roles,
                         Constants.StandardScopes.Address,
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -325,7 +324,8 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Roles,
                         Constants.StandardScopes.OfflineAccess,
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -365,6 +365,7 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Email,
                         Constants.StandardScopes.Roles,
                         Constants.StandardScopes.Address,
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -395,7 +396,8 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.OpenId,
                         Constants.StandardScopes.Profile,
                         Constants.StandardScopes.Email,
-                        "tenant"
+                        "tenant",
+                        "signalR"
                     },
 
                     RedirectUris = new List<string>
@@ -425,6 +427,7 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Email,
                         Constants.StandardScopes.Roles,
                         Constants.StandardScopes.Address,
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -459,7 +462,8 @@ namespace IdentityServer3.Host.Config
                         Constants.StandardScopes.Roles,
                         Constants.StandardScopes.Address,
                         "read",
-                        "write"
+                        "write",
+                        "signalR"
                     },
 
                     ClientUri = "https://identityserver.io",
@@ -496,7 +500,8 @@ namespace IdentityServer3.Host.Config
                     {
                         StandardScopes.OpenId.Name,
                         StandardScopes.Profile.Name,
-                        "read", "write"
+                        "read", "write",
+                        "signalR"
                     },
 
                     AccessTokenType = AccessTokenType.Reference
@@ -526,7 +531,8 @@ namespace IdentityServer3.Host.Config
                         StandardScopes.OpenId.Name,
                         StandardScopes.Profile.Name,
                         StandardScopes.OfflineAccess.Name,
-                        "read", "write"
+                        "read", "write",
+                        "signalR"
                     },
 
                     AccessTokenType = AccessTokenType.Reference
@@ -556,7 +562,8 @@ namespace IdentityServer3.Host.Config
                     },
                     AllowedScopes = new List<string>
                     {
-                        "openid", "profile", "write"
+                        "openid", "profile", "write",
+                        "signalR"
                     },
 
                     AccessTokenType = AccessTokenType.Reference
