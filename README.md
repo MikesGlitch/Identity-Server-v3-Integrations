@@ -1,6 +1,10 @@
 # Identity Server 3 Integrations
 
-Here are some example of some integrations that I've used in the past for integrating Identity Server V3 into WebAPI Swashbuckle and Self Hosted SignalR. 
+Here are some example of some integrations that I've used in the past for integrating Identity Server V3 into:
+<ul>
+<li>WebAPI Swashbuckle</li>
+<li>Self Hosted SignalR</li>
+</ul> 
 
 This code will go alongside my article here:  [http://michaelclark.tech/2016/08/21/integrating-identity-server-3-with-web-api-2-swashbuckle/] (http://michaelclark.tech/2016/08/21/integrating-identity-server-3-with-web-api-2-swashbuckle/)
 
