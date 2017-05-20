@@ -184,12 +184,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SheAzure.Utility\SheAzure.Utility.csproj">
-      <Project>{B9D60056-0EA2-4080-83F6-3F8EF8946512}</Project>
-      <Name>SheAzure.Utility</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
